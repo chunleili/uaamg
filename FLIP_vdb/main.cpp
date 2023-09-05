@@ -54,6 +54,15 @@ void write_substep_stat_data(YAML::Node& in_out_node, FLIP_Solver_OpenVDB& in_FL
 
 int main(int argc, char* argv[]) {
     std::ios_base::sync_with_stdio(false);
+    // print the arguments
+    printf("FLIP_simulator ");
+    for (int i = 0; i < argc; i++) {
+        printf("%s ", argv[i]);
+    }
+
+    // print current working directory
+    std::filesystem::path cwd = std::filesystem::current_path();
+    printf("\ncurrent working directory: %s\n", cwd.string().c_str());
 
     // load yaml files
     if (argc != 2) {
@@ -105,13 +114,14 @@ int main(int argc, char* argv[]) {
 
     if (YamlSingleton::get()["source_vdb"]) {
        
-        openvdb::io::File input_source(YamlSingleton::get()["source_vdb"].as<std::string>());
+        auto srcInputName = YamlSingleton::get()["source_vdb"].as<std::string>();
+        openvdb::io::File input_source(srcInputName);
         try { 
             std::cout << "load liquid source vdb file: " << input_source.filename() << std::endl;
             input_source.open(); 
         }
         catch (openvdb::IoError err) {
-            std::cout << "cannot open file: " << YamlSingleton::get()["source_vdb"].as<std::string>() << '\n';
+            std::cout << "cannot open file: " << srcInputName << '\n';
             return 1;
         } 
 

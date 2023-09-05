@@ -1,0 +1,13 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "run cow",
+            "type": "shell",
+            "command": "cd ${workspaceFolder}/Scene_Houdini/vis_cow ; ${workspaceFolder}/bin/FLIP_simulator/FLIP_simulator.exe config_cow.yaml",
+            "problemMatcher": [
+                "$msCompile"
+            ]
+        }
+    ]
+   }

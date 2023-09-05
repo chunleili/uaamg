@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "cut bunny",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/FLIP_vdb/Debug/FLIP_simulator.exe",
+            "args": ["config_bunny_low_res.yaml"],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}/Scene_Houdini/vis_cut_bunny",
+            "environment": [
+            ],
+            "console": "integratedTerminal"
+        },
+    ]
+}
