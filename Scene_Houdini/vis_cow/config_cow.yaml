@@ -1,8 +1,8 @@
 ---
 ## output dir
 output_prefix: "output_cow"
-time_step: 0.003
-simulation_time: 5.0
+time_step: 0.01
+simulation_time: 3.0
 
 radius:  1
 init_vel_x: 0
@@ -18,7 +18,7 @@ FLIP_domain_solid: false
 FLIP_solid_friction: 0.0
 FLIPCFL: 1
 FLIP_min_step_num: 1
-FLIP_max_step_num: 1
+FLIP_max_step_num: 4
 
 FLIPpool-minx: 0
 FLIPpool-miny: 0
