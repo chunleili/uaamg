@@ -1,8 +1,8 @@
 ---
 ## output dir
-output_prefix: "output_cow"
+output_prefix: "output_cow2"
 time_step: 0.01
-simulation_time: 3.0
+simulation_time: 1.0
 
 radius:  1
 init_vel_x: 0
@@ -32,7 +32,7 @@ pressure_acc: 1e-4
 viscosity_acc: 1e-3
 
 enable_viscosity: true
-viscosity_coef: 2000
+viscosity_coef: 500
 # solids_vdb: "cross_wireframe_low_res.vdb"
 #solids_vel_vdb
 source_vdb: "source_vdb_cow.vdb"
