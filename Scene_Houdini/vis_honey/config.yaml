@@ -1,6 +1,6 @@
 ---
 ## output dir
-output_prefix: "output_5000"
+output_prefix: "output_flip_new_honey"
 time_step: 0.04
 simulation_time: 8
 
@@ -29,10 +29,10 @@ FLIPpool-minz: -2
 FLIPpool-maxx: 3
 FLIPpool-maxy: 8
 FLIPpool-maxz: 2
-FLIPdx:  0.05
+FLIPdx:  0.096
 
 enable_viscosity: true
-viscosity_coef: 5000
+viscosity_coef: 6500
 solids_vdb: "strawberry.vdb"
 #solids_vel_vdb
 source_vdb: "source.vdb"
